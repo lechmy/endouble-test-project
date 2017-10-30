@@ -1,0 +1,25 @@
+$assets-path: '..';
+
+$primary: #005c9d;
+$secondary: #01385f;
+
+$white: #fff;
+$black: #000;
+$gray-5: #ebebeb;
+$gray-10: #aaa;
+$gray-20: #999;
+$gray-30: #666;
+$error: #c80000;
+
+
+$disabled: lighten($primary, 30%);
+
+$z-index-base: 900;
+
+$time: 0.3s;
+
+$main-background: #f4f4f4;
+$footer-background: #fcfcfc;
+$header-background-image: '#{$assets-path}/images/backgrounds/header-image.jpg';
+$footer-background-image: '#{$assets-path}/images/backgrounds/footer-image.png';
+$valid-inut-field: '#{$assets-path}/images/valid-inputfield.png'

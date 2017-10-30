@@ -1,0 +1,111 @@
+.input-field {
+    $unit: 42px;
+
+    height: $unit;
+    width: 100%;
+    padding: 8px 13px;
+    border: 1px solid $white;
+    border-radius: 0px;
+    background-color: $white;
+    box-shadow: none;
+    color: $secondary;
+    font-weight: 700;
+    line-height: 1;
+    -webkit-appearance: none;
+    @include transition(border $time);
+
+    &:focus {
+        outline: none;
+        border: 1px solid $gray-10;
+    }
+
+    &:disabled {
+        color: $disabled;
+        cursor: not-allowed;
+    }
+
+    &.empty{
+        border: 1px solid $gray-10;
+    }
+
+    &.invalid{
+        border: 1px solid $error;
+        color: $error;
+    }
+
+    &.valid{
+        background-position: calc(100% - 10px) center;
+        background-repeat: no-repeat;
+        background-image: url($valid-inut-field);
+    }
+
+    @media (max-width: 991px){
+        font-size: 16px;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+textarea.input-field{
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 80px;
+    line-height: 1.3;
+}
+.select-input-field{
+    $unit: 42px;
+    select.input-field{
+        line-height: 1;
+        
+    }
+    &:after{
+        content: "\f107";
+        position: absolute;
+        top: 0px;
+        right: 25px;
+        font-family: FontAwesome;
+        font-size: 20px;
+        line-height: $unit;
+        pointer-events: none;
+    }
+}
+
+.add-on-input-group {
+    $unit: 40px;
+    .input-field {
+        padding-right: $unit + 5px;
+    }
+
+    .add-on-btn {
+        width: $unit;
+        height: $unit;
+        padding: 0px;
+        border: none;
+        border-radius: 0px;
+        background-color: $primary;
+        color: $white;
+        line-height: $unit;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background-color: darken($primary, 6%);
+        }
+    }
+}
+.error-message{
+    color: $error;
+    font-size: 12px;
+    opacity: 0;
+    @include transition(opacity $time);
+
+    &.active{
+        opacity: 1;
+    }
+}

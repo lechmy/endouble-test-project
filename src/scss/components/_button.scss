@@ -1,0 +1,31 @@
+.btn-regular {
+    padding: 9px 12px;
+    border-radius: 0px;
+    background-color: $primary;
+    color: $white;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        color: $white;
+        background-color: darken($primary, 6%);
+    }
+
+    @media (max-width: 767px) {
+        display: block;
+        width: 100%;
+        padding: 9px 5px;
+    }
+}
+.btn-regular:disabled {
+    cursor: not-allowed;
+    background-color: $disabled;
+
+    &:hover,
+    &:focus {
+        color: $white;
+        background-color: $disabled;
+    }
+}

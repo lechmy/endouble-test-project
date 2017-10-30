@@ -1,0 +1,64 @@
+
+.checkbox {
+    $unit: 17px;
+    display: inline-block;
+    height: 20px;
+    margin: 10px 0px;
+    vertical-align: middle;
+
+    input[type="checkbox"] {
+        width: 0px;
+        height: 0px;
+        visibility: hidden;
+        &:focus{
+            &+label:before{
+                outline: 1px solid $primary;
+            }
+        }
+    }
+
+    label {
+        position: relative;
+        margin-right: 20px;
+        margin-bottom: 0px;
+        line-height: $unit;
+        cursor: pointer;
+        @include transition(outline $time);
+
+        @media (max-width: 991px){
+            margin-right: 20px;
+            padding: 0px;
+        }
+
+        &:before {
+            content: "";
+            font-family: FontAwesome;
+            position: absolute;
+            top: 0px;
+            left: -$unit - 10;
+            width: $unit;
+            height: $unit;
+            border: 1px solid $gray-20;
+            background-color: transparent;
+            line-height: $unit - 2;
+            text-align: center;
+            color: $black;
+            font-size: $unit / 1.3;
+        }
+    }
+
+    input[type="checkbox"]:checked + label {
+        &:before {
+            content: "\f00c";
+        }
+    }
+
+    input[type="checkbox"]:disabled + label {
+        cursor: not-allowed;
+
+        &:before {
+            border: 1px solid $disabled;
+            color: $disabled;
+        }
+    }
+}

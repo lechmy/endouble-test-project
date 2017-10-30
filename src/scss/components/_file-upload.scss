@@ -1,0 +1,12 @@
+.file-input{
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+    input[type=file]{
+        width: 0px;
+        height: 0px;
+    }
+    button{
+        width: 100%;
+    }
+}

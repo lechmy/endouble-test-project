@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Purchasing Assistant - Amsterdarm, the Netherlands</title>
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <header>
+        <button type="button" class="hamburger-btn js-hamburger-btn">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="logo">logo</div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="javascript:;">home</a></li>
+                <li><a href="javascript:;">jobs</a></li>
+                <li><a href="javascript:;">about</a></li>
+                <li><a href="javascript:;">departments</a></li>
+                <li><a href="javascript:;">contact</a></li>
+            </ul>
+        </nav>
+        <button class="btn-briefcase"><i class="fa fa-briefcase" aria-hidden="true"></i> 1</button>
+        <div class="search-form">
+            <form action="/search" method="get">
+                <input type="text" placeholder="search for jobs by keyword">
+                <button type="submit" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+        </div>
+    </header>
+    <section class="job-details header-title js-parallax">
+        <div class="container">
+            <div class="content-holder">
+                <h1>purchasing assistant</h1>
+                <p>amsterdam, the netherlands</p>
+            </div>
+        </div>
+    </section>
+    <section class="job-details apply-form">
+        <div class="container">
+
+            <h2 class="form-title">
+                apply for the position of purchasing assistant
+            </h2>
+            <form action="/apply" method="post">
+                <div class="row mb-20">
+                    <div class="col-xs-12">
+                        <p class="form-section-title">Personal details *</p>
+                    </div>
+                    <div class="col-xs-12 col-md-6"><input type="text" class="input-field js-personal-info-field" name="firstName" id="firstName" placeholder="First name" required></div>
+                    <div class="col-xs-12 col-md-6"><input type="text" class="input-field js-personal-info-field" name="lastName" id="lastName" placeholder="Last name" required></div>
+                    <div class="col-xs-12 col-md-6"><input type="text" class="input-field js-datepicker js-personal-info-field" name="birthDate" id="birthDate" placeholder="Birth date" required /></div>
+                    <div class="col-xs-12 col-md-6">
+                        <div class="select-input-field">
+                            <select class="input-field" name="sex" id="sex">
+                                <option value="male" selected>Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6"><input type="email" class="input-field js-personal-info-field" name="email" id="email" placeholder="Email" required></div>
+                    <div class="col-xs-12 col-md-6"><input type="number" class="input-field js-personal-info-field" name="phone" id="phone" placeholder="Phone number" required></div>
+                    <div class="col-xs-12 col-md-6"><input type="text" class="input-field js-personal-info-field" name="address" id="address" placeholder="Address" required></div>
+                    <div class="col-xs-12 col-md-6"><input type="text" class="input-field js-personal-info-field" name="city" id="city" placeholder="City" required></div>
+                    <div class="col-xs-12 col-md-6"><input type="text" class="input-field js-zip-code" name="zip" id="zip" placeholder="Zip code" required></div>
+                    <div class="col-xs-12 col-md-6"><input type="text" class="input-field js-personal-info-field" name="country" id="country" placeholder="Country" required></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <p class="form-section-title">Your motivation *</p>
+                        <textarea class="input-field"></textarea>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <label class="form-section-title">Attach your document <span>(pdf, doc(x), jpg max. 4 Mb)</span></label>
+                        <div class="file-upload-holder">
+                            <label for="resume">Resume *</label>
+                            <div class="file-input">
+                                <input class="js-hidden-file-input" type="file" name="resume" id="resume" tabindex="-1" required>
+                            </div>
+                            <button type="button" class="btn btn-regular js-file-upload" data-name="resume"><i class="fa fa-desktop hidden-xs" aria-hidden="true"></i> upload</button>
+                            <button type="button" class="btn btn-regular"><i class="fa fa-dropbox hidden-xs" aria-hidden="true"></i> dropbox</button>
+                        </div>
+                        <div class="file-upload-holder">
+                            <label for="portfolio">Portfolio</label>
+                            <div class="file-input">
+                                <input type="file" class="js-hidden-file-input" name="portfolio" id="portfolio" tabindex="-1">
+                            </div>
+                            <button type="button" class="btn btn-regular js-file-upload" data-name="portfolio"><i class="fa fa-desktop hidden-xs" aria-hidden="true"></i> upload</button>
+                            <button type="button" class="btn btn-regular"><i class="fa fa-dropbox hidden-xs" aria-hidden="true"></i> dropbox</button>
+                        </div>
+                        <div class="file-upload-holder">
+                            <label for="photo">Photo</label>
+                            <div class="file-input">
+                                <input type="file" class="js-hidden-file-input" name="photo" id="photo" tabindex="-1">
+                            </div>
+                            <button type="button" class="btn btn-regular js-file-upload" data-name="photo"><i class="fa fa-desktop hidden-xs" aria-hidden="true"></i> upload</button>
+                            <button type="button" class="btn btn-regular"><i class="fa fa-dropbox hidden-xs" aria-hidden="true"></i> dropbox</button>
+                        </div>
+                        <span class="error-message js-file-error-message">x</span>
+                    </div>
+                </div>
+                <div class="apply-form-controls">
+                    
+                    <div class="controls-holder">
+                        <div class="checkbox">
+                            <input type="checkbox" name="sendcopy" id="sendcopy" />
+                            <label for="sendcopy">Send me a copy</label>
+                        </div>
+                        <button type="submit" class=" btn btn-regular">apply for this job</button>
+                    </div>
+                    <div class="back-btn-holder">
+                        <a href="javascript:;">< Back to job description</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="job-details additional-information">
+        <div class="container">
+            <div class="content-holder">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <h3>Application procedure</h3>
+                        <ul>
+                            <li>Lorem ipsum</li>
+                            <li>Lorem ipsum</li>
+                            <li>Lorem ipsum</li>
+                            <li>Lorem ipsum</li>
+                        </ul>
+                        <a href="javascript:;">Continue reading</a>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <h3>got a question</h3>
+                        <p>Please contact recruitment</p>
+                        <a href="tel:+312012345678">T. +31 20 123 456 78</a><br />
+                        <span>Or</span> <a href="mailto:reqruiter@firmatamsterdam.com">send us an email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <button class="btn back-to-top-btn js-back-to-top-btn">back to top</button>
+            <div class="container">
+                <div class="content-holder">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-3">
+                            <h4>jobs at</h4>
+                            <ul>
+                                <li><a href="javascript:;">Home</a></li>
+                                <li><a href="javascript:;">Jobs</a></li>
+                                <li><a href="javascript:;">About</a></li>
+                                <li><a href="javascript:;">Department</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <h4>information</h4>
+                            <ul>
+                                <li><a href="javascript:;">F.A.Q.</a></li>
+                                <li><a href="javascript:;">Application process</a></li>
+                                <li><a href="javascript:;">Privacy policy</a></li>
+                                <li><a href="javascript:;">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <h4>follow us</h4>
+                            <ul class="social-media-list">
+                                <li>
+                                    <a href="javascript:;">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>Newsletter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>Facebook
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>Instagram
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>Pinterest
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>Twitter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <i class="fa fa-youtube" aria-hidden="true"></i>YouTube
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <i class="fa fa-tumblr" aria-hidden="true"></i>Tumblr
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <i class="fa fa-google-plus" aria-hidden="true"></i>Google+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">
+                                        <i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <h4>job alert</h4>
+                            <ul>
+                                <li><a href="javascript:;">Subscribe to our job alert</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="disclaimer">
+            <div class="container">&copy;</div>
+        </div>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

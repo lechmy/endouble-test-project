@@ -1,0 +1,15 @@
+body{
+    background-color: $main-background;
+}
+a{
+    color: $gray-20;
+    &:hover,
+    &:focus{
+        color: $gray-20;
+        outline: none;
+        text-decoration: underline;
+    }
+    &:visited{
+        color: $gray-20;
+    }
+}

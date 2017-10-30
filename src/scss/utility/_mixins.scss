@@ -1,0 +1,28 @@
+@mixin transition($property) {
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    -o-transition: $property;
+    transition: $property;
+}
+
+@mixin transform($property) {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+@mixin box-shadow($property) {
+    -webkit-box-shadow: $property;
+    -moz-box-shadow: $property;
+    box-shadow: $property;
+}
+
+@mixin no-effect($color: inherit) {
+    &:hover, &:active, &:focus, &:focus:active {
+        outline: none;
+        color: $color;
+        box-shadow: none;
+        text-decoration: none;
+    }
+}
